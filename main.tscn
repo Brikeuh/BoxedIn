@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dsnsamlghos4x"]
+[gd_scene load_steps=3 format=3 uid="uid://dsnsamlghos4x"]
 
 [ext_resource type="Texture2D" uid="uid://bu1filaq5t0li" path="res://icon.svg" id="1_2t7eq"]
+[ext_resource type="Texture2D" uid="uid://c77roljw0ujlf" path="res://closed_box.png" id="2_yvusu"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(127, 118)
 texture = ExtResource("1_2t7eq")
+
+[node name="ClosedBox" type="Sprite2D" parent="."]
+position = Vector2(403.523, 119.605)
+scale = Vector2(0.205076, 0.205076)
+texture = ExtResource("2_yvusu")
