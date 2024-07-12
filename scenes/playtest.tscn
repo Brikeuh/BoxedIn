@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ig3x4ae4yvvd"]
+
+[ext_resource type="Texture2D" uid="uid://b8y1y73lp0s36" path="res://assets/TitleScreenArt/BasicBoxLogo.png" id="1_iyagv"]
+
+[node name="Playtest" type="Node2D"]
+
+[node name="BasicBoxLogo" type="Sprite2D" parent="."]
+position = Vector2(576, 328)
+scale = Vector2(3, 3)
+texture = ExtResource("1_iyagv")
