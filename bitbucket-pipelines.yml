@@ -30,6 +30,6 @@ pipelines:
     - step:
         name: 'Deployment to Production'
         deployment: production
-        trigger: 'manual'
+        trigger: 'automatic'
         script:
           - echo "Your deployment to production script goes here..."
