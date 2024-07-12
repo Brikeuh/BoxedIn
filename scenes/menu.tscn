@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsnsamlghos4x"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_qtb1x"]
+[ext_resource type="Texture2D" uid="uid://b4mqd74nslytx" path="res://assets/TitleScreenArt/BoxLogo.png" id="2_m1ufh"]
+[ext_resource type="Texture2D" uid="uid://b8y1y73lp0s36" path="res://assets/TitleScreenArt/BasicBoxLogo.png" id="3_dcnc6"]
+[ext_resource type="FontFile" uid="uid://bwxviydg1mwja" path="res://Fonts/CONCHARS.png" id="4_l5oe4"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qtb1x")
+
+[node name="BoxLogo" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(856, 328)
+scale = Vector2(10.3125, 10.1875)
+texture = ExtResource("2_m1ufh")
+
+[node name="BasicBoxLogo" type="Sprite2D" parent="BoxLogo"]
+texture_filter = 1
+position = Vector2(-6.20607, 4.71166)
+scale = Vector2(0.213407, 0.213407)
+texture = ExtResource("3_dcnc6")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 96.0
+offset_top = 152.0
+offset_right = 608.0
+offset_bottom = 254.0
+theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_font_sizes/font_size = 64
+text = "boxed in"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 232.0
+offset_top = 256.0
+offset_right = 464.0
+offset_bottom = 448.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_font_sizes/font_size = 32
+text = "play"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_font_sizes/font_size = 32
+text = "options"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_font_sizes/font_size = 32
+text = "quit"
+
+[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
