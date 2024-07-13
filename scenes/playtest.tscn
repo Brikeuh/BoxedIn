@@ -1,10 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://ig3x4ae4yvvd"]
+[gd_scene load_steps=4 format=3 uid="uid://ig3x4ae4yvvd"]
 
-[ext_resource type="Texture2D" uid="uid://b8y1y73lp0s36" path="res://assets/TitleScreenArt/BasicBoxLogo.png" id="1_iyagv"]
+[ext_resource type="Script" path="res://scripts/playerMovement.gd" id="1_4rk5q"]
+[ext_resource type="Texture2D" uid="uid://bqj80wl3kr7vv" path="res://assets/PlayerArt/PlayerTemporary.png" id="2_o41v2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbtyf"]
+size = Vector2(46, 107)
 
 [node name="Playtest" type="Node2D"]
 
-[node name="BasicBoxLogo" type="Sprite2D" parent="."]
-position = Vector2(576, 328)
-scale = Vector2(3, 3)
-texture = ExtResource("1_iyagv")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4rk5q")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(132, 258)
+texture = ExtResource("2_o41v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(132, 258.5)
+shape = SubResource("RectangleShape2D_bbtyf")
