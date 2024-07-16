@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8y1y73lp0s36"
-path="res://.godot/imported/BasicBoxLogo.png-e8f5efc2913d3051d8f969e7bb796202.ctex"
+path="res://.godot/imported/BasicBoxLogo.png-b8cda64e5b8981a0e62c4ae291bfbffa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/TitleScreenArt/BasicBoxLogo.png"
-dest_files=["res://.godot/imported/BasicBoxLogo.png-e8f5efc2913d3051d8f969e7bb796202.ctex"]
+source_file="res://assets/titlescreenart/BasicBoxLogo.png"
+dest_files=["res://.godot/imported/BasicBoxLogo.png-b8cda64e5b8981a0e62c4ae291bfbffa.ctex"]
 
 [params]
 
