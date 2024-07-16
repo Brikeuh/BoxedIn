@@ -3,12 +3,12 @@
 importer="font_data_image"
 type="FontFile"
 uid="uid://bwxviydg1mwja"
-path="res://.godot/imported/CONCHARS.png-f00d77154de90be1e0bc0c5b7ed7248d.fontdata"
+path="res://.godot/imported/CONCHARS.png-9c19501f811155ab6b2eea4db5b740a1.fontdata"
 
 [deps]
 
-source_file="res://Fonts/CONCHARS.png"
-dest_files=["res://.godot/imported/CONCHARS.png-f00d77154de90be1e0bc0c5b7ed7248d.fontdata"]
+source_file="res://assets/fonts/CONCHARS.png"
+dest_files=["res://.godot/imported/CONCHARS.png-9c19501f811155ab6b2eea4db5b740a1.fontdata"]
 
 [params]
 
