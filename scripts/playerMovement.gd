@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const max_speed = 300
-const accel = 1000
+const accel = 100000
 const friction = 600
 
 var input = Vector2.ZERO
@@ -20,19 +20,9 @@ func player_movement(delta):
 	if input == Vector2.ZERO:
 		#instant stop
 		velocity = Vector2.ZERO
-		#character will slow down gradually
-		#if velocity.length() > (friction * delta):
-			#velocity -= velocity.normalized() * friction * delta
-		#else:
-			#velocity = Vector2.ZERO
-	elif velocity.length() < max_speed:
-		# gradually speeds character up until max speed is reached
-		velocity += (input * accel * delta)
-		velocity = velocity.limit_length(max_speed)
 	else:
-		# player can now change direction (with no sliding) after reaching max speed
-		# stops when the player stops
-		velocity = (input * accel*100 * delta)
+		# player will move at a set maximum speed in any direction
+		velocity = (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
 
 ## Called when the node enters the scene tree for the first time.
