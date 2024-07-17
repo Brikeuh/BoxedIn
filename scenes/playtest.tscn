@@ -44,6 +44,32 @@ texture = ExtResource("3_ies8o")
 position = Vector2(742, 165)
 shape = SubResource("RectangleShape2D_shqqr")
 
+[node name="BoxEnemy2" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
+position = Vector2(150, 150)
+
+[node name="Sprite2D" type="Sprite2D" parent="BoxEnemy2"]
+texture_filter = 1
+position = Vector2(744, 176)
+scale = Vector2(3.40468, 3.40468)
+texture = ExtResource("3_ies8o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxEnemy2"]
+position = Vector2(742, 165)
+shape = SubResource("RectangleShape2D_shqqr")
+
+[node name="BoxEnemy3" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
+position = Vector2(0, 300)
+
+[node name="Sprite2D" type="Sprite2D" parent="BoxEnemy3"]
+texture_filter = 1
+position = Vector2(744, 176)
+scale = Vector2(3.40468, 3.40468)
+texture = ExtResource("3_ies8o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxEnemy3"]
+position = Vector2(742, 165)
+shape = SubResource("RectangleShape2D_shqqr")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="TopBorder" type="CollisionShape2D" parent="StaticBody2D"]
