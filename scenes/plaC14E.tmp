@@ -18,7 +18,7 @@ size = Vector2(1165, 20)
 
 [node name="Playtest" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+[node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(133, 210)
 script = ExtResource("1_4rk5q")
 
@@ -32,7 +32,7 @@ shape = SubResource("RectangleShape2D_bbtyf")
 [node name="Muzzle" type="Marker2D" parent="Player"]
 position = Vector2(1.465, -41.73)
 
-[node name="BoxEnemy" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
+[node name="BoxEnemy" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="BoxEnemy"]
 texture_filter = 1
