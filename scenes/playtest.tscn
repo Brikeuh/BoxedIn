@@ -1,26 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://ig3x4ae4yvvd"]
 
 [ext_resource type="Script" path="res://scripts/playerMovement.gd" id="1_4rk5q"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bqj80wl3kr7vv" path="res://assets/sprites/PlayerTemporary.png" id="2_uqehi"]
 [ext_resource type="Texture2D" uid="uid://xvray7majlj1" path="res://assets/sprites/BoxEnemy.png" id="3_ies8o"]
-=======
-[ext_resource type="Texture2D" uid="uid://bqj80wl3kr7vv" path="res://assets/playerart/PlayerTemporary.png" id="2_o41v2"]
->>>>>>> c8011308bc13002f80a697ed3e11da65d282b3fc
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bbtyf"]
 size = Vector2(46, 107)
 
-<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shqqr"]
 size = Vector2(128, 112)
-=======
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4tn7"]
-size = Vector2(22, 664)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5r5a"]
-size = Vector2(1165, 20)
->>>>>>> c8011308bc13002f80a697ed3e11da65d282b3fc
 
 [node name="Playtest" type="Node2D"]
 
@@ -36,7 +24,6 @@ texture = ExtResource("2_uqehi")
 position = Vector2(132, 258.5)
 shape = SubResource("RectangleShape2D_bbtyf")
 
-<<<<<<< HEAD
 [node name="BoxEnemy" type="CharacterBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="BoxEnemy"]
@@ -49,22 +36,3 @@ texture = ExtResource("3_ies8o")
 position = Vector2(742, 165)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_shqqr")
-=======
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="TopBorder" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-13, 324)
-shape = SubResource("RectangleShape2D_c4tn7")
-
-[node name="BottomBorder" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1165, 328)
-shape = SubResource("RectangleShape2D_c4tn7")
-
-[node name="RightBorder" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(579, 660)
-shape = SubResource("RectangleShape2D_a5r5a")
-
-[node name="LeftBorder" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(576, -13)
-shape = SubResource("RectangleShape2D_a5r5a")
->>>>>>> c8011308bc13002f80a697ed3e11da65d282b3fc
