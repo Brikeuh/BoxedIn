@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_qtb1x"]
 [ext_resource type="Texture2D" uid="uid://cff8fdtw2cyxx" path="res://assets/titlescreenart/BoxLogo.png" id="2_m1ufh"]
 [ext_resource type="Texture2D" uid="uid://b8y1y73lp0s36" path="res://assets/titlescreenart/BasicBoxLogo.png" id="3_dcnc6"]
-[ext_resource type="FontFile" uid="uid://bwxviydg1mwja" path="res://fonts/CONCHARS.png" id="4_l5oe4"]
+[ext_resource type="FontFile" uid="uid://bwxviydg1mwja" path="res://assets/fonts/CONCHARS.png" id="4_p1bl6"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -29,7 +29,7 @@ offset_left = 96.0
 offset_top = 152.0
 offset_right = 608.0
 offset_bottom = 254.0
-theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_fonts/font = ExtResource("4_p1bl6")
 theme_override_font_sizes/font_size = 64
 text = "boxed in"
 horizontal_alignment = 1
@@ -52,21 +52,21 @@ alignment = 1
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_fonts/font = ExtResource("4_p1bl6")
 theme_override_font_sizes/font_size = 32
 text = "play"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_fonts/font = ExtResource("4_p1bl6")
 theme_override_font_sizes/font_size = 32
 text = "options"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_l5oe4")
+theme_override_fonts/font = ExtResource("4_p1bl6")
 theme_override_font_sizes/font_size = 32
 text = "quit"
 

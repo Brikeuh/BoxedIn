@@ -14,10 +14,6 @@ config/name="BoxedIn"
 run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 
-[display]
-
-window/stretch/mode="viewport"
-
 [input]
 
 left={
