@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b24mm86ig1t52"]
+
+[ext_resource type="Texture2D" uid="uid://bqj80wl3kr7vv" path="res://assets/sprites/PlayerTemporary.png" id="1_cuner"]
+[ext_resource type="Script" path="res://scripts/projectileBehavior.gd" id="1_g2tph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbcda"]
+size = Vector2(22, 10)
+
+[node name="Projectile" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_g2tph")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cuner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wbcda")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

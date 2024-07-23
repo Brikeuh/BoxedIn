@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dsnsamlghos4x"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_qtb1x"]
-[ext_resource type="Texture2D" uid="uid://cff8fdtw2cyxx" path="res://assets/titlescreenart/BoxLogo.png" id="2_m1ufh"]
-[ext_resource type="Texture2D" uid="uid://b8y1y73lp0s36" path="res://assets/titlescreenart/BasicBoxLogo.png" id="3_dcnc6"]
+[ext_resource type="Texture2D" uid="uid://cff8fdtw2cyxx" path="res://assets/TitleScreenArt/BoxLogo.png" id="2_m1ufh"]
+[ext_resource type="Texture2D" uid="uid://b8y1y73lp0s36" path="res://assets/TitleScreenArt/BasicBoxLogo.png" id="3_dcnc6"]
 [ext_resource type="FontFile" uid="uid://bwxviydg1mwja" path="res://assets/fonts/CONCHARS.png" id="4_p1bl6"]
 
 [node name="TitleScreen" type="Control"]
