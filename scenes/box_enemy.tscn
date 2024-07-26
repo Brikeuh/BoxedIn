@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bs37qypqfq60c"]
+
+[ext_resource type="Texture2D" uid="uid://xvray7majlj1" path="res://assets/sprites/BoxEnemy.png" id="1_w0nbf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hb85"]
+size = Vector2(128, 112)
+
+[node name="BoxEnemy" type="Node2D"]
+
+[node name="BoxEnemy" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="BoxEnemy"]
+texture_filter = 1
+scale = Vector2(3.40468, 3.40468)
+texture = ExtResource("1_w0nbf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxEnemy"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_7hb85")

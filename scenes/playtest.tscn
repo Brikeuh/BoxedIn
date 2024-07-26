@@ -1,14 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ig3x4ae4yvvd"]
+[gd_scene load_steps=7 format=3 uid="uid://ig3x4ae4yvvd"]
 
 [ext_resource type="Script" path="res://scripts/playerControl.gd" id="1_4rk5q"]
+[ext_resource type="PackedScene" uid="uid://bs37qypqfq60c" path="res://scenes/box_enemy.tscn" id="2_4woor"]
 [ext_resource type="Texture2D" uid="uid://bqj80wl3kr7vv" path="res://assets/sprites/PlayerTemporary.png" id="2_uqehi"]
-[ext_resource type="Texture2D" uid="uid://xvray7majlj1" path="res://assets/sprites/BoxEnemy.png" id="3_ies8o"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bbtyf"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fp3b"]
 size = Vector2(46, 107)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_shqqr"]
-size = Vector2(128, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4tn7"]
 size = Vector2(22, 664)
@@ -18,57 +15,30 @@ size = Vector2(1165, 20)
 
 [node name="Playtest" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
-position = Vector2(133, 210)
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(208, 256)
+
+[node name="Player" type="CharacterBody2D" parent="Player" groups=["Player"]]
 script = ExtResource("1_4rk5q")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="Player/Player"]
 texture_filter = 1
 texture = ExtResource("2_uqehi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_bbtyf")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Player"]
+shape = SubResource("RectangleShape2D_4fp3b")
 
-[node name="Muzzle" type="Marker2D" parent="Player"]
-position = Vector2(1.465, -41.73)
+[node name="Muzzle" type="Marker2D" parent="Player/Player"]
+position = Vector2(32, -40)
 
-[node name="BoxEnemy" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
+[node name="BoxEnemy" parent="." instance=ExtResource("2_4woor")]
+position = Vector2(688, 440)
 
-[node name="Sprite2D" type="Sprite2D" parent="BoxEnemy"]
-texture_filter = 1
-position = Vector2(744, 176)
-scale = Vector2(3.40468, 3.40468)
-texture = ExtResource("3_ies8o")
+[node name="BoxEnemy2" parent="." instance=ExtResource("2_4woor")]
+position = Vector2(768, 288)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxEnemy"]
-position = Vector2(742, 165)
-shape = SubResource("RectangleShape2D_shqqr")
-
-[node name="BoxEnemy2" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
-position = Vector2(150, 150)
-
-[node name="Sprite2D" type="Sprite2D" parent="BoxEnemy2"]
-texture_filter = 1
-position = Vector2(744, 176)
-scale = Vector2(3.40468, 3.40468)
-texture = ExtResource("3_ies8o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxEnemy2"]
-position = Vector2(742, 165)
-shape = SubResource("RectangleShape2D_shqqr")
-
-[node name="BoxEnemy3" type="CharacterBody2D" parent="." groups=["BoxEnemy"]]
-position = Vector2(0, 300)
-
-[node name="Sprite2D" type="Sprite2D" parent="BoxEnemy3"]
-texture_filter = 1
-position = Vector2(744, 176)
-scale = Vector2(3.40468, 3.40468)
-texture = ExtResource("3_ies8o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxEnemy3"]
-position = Vector2(742, 165)
-shape = SubResource("RectangleShape2D_shqqr")
+[node name="BoxEnemy3" parent="." instance=ExtResource("2_4woor")]
+position = Vector2(688, 144)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
