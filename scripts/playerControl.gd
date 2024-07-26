@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #@export var Projectile : PackedScene
-@onready var Projectile = preload("res://projectile.tscn")
+@onready var Projectile = preload("res://scenes/projectile.tscn")
 
 const max_speed = 300
 const accel = 100000

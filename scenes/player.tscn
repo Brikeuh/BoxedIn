@@ -19,4 +19,3 @@ texture = ExtResource("2_gxgqj")
 shape = SubResource("RectangleShape2D_4fp3b")
 
 [node name="Muzzle" type="Marker2D" parent="Player"]
-position = Vector2(1.465, -41.73)
