@@ -16,6 +16,7 @@ size = Vector2(1165, 20)
 [node name="Playtest" type="Node2D"]
 
 [node name="Player" type="Node2D" parent="."]
+z_index = 1
 position = Vector2(208, 256)
 
 [node name="Player" type="CharacterBody2D" parent="Player" groups=["Player"]]
@@ -29,31 +30,34 @@ texture = ExtResource("2_uqehi")
 shape = SubResource("RectangleShape2D_4fp3b")
 
 [node name="Muzzle" type="Marker2D" parent="Player/Player"]
-position = Vector2(32, -40)
+position = Vector2(1, -36)
 
-[node name="BoxEnemy" parent="." instance=ExtResource("2_4woor")]
-position = Vector2(688, 440)
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Terrain"]]
 
-[node name="BoxEnemy2" parent="." instance=ExtResource("2_4woor")]
-position = Vector2(768, 288)
-
-[node name="BoxEnemy3" parent="." instance=ExtResource("2_4woor")]
-position = Vector2(688, 144)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="TopBorder" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="TopBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
 position = Vector2(-13, 324)
 shape = SubResource("RectangleShape2D_c4tn7")
 
-[node name="BottomBorder" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="BottomBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
 position = Vector2(1165, 328)
 shape = SubResource("RectangleShape2D_c4tn7")
 
-[node name="RightBorder" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="RightBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
 position = Vector2(579, 660)
 shape = SubResource("RectangleShape2D_a5r5a")
 
-[node name="LeftBorder" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="LeftBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
 position = Vector2(576, -13)
 shape = SubResource("RectangleShape2D_a5r5a")
+
+[node name="BoxEnemy" parent="." instance=ExtResource("2_4woor")]
+position = Vector2(664, 341)
+
+[node name="BoxEnemy2" parent="." instance=ExtResource("2_4woor")]
+position = Vector2(391, 541)
+movementType = 1
+
+[node name="BoxEnemy3" parent="." node_paths=PackedStringArray("targetToChase") instance=ExtResource("2_4woor")]
+position = Vector2(916, 111)
+movementType = 3
+targetToChase = NodePath("../Player/Player")
