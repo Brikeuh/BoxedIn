@@ -3,13 +3,13 @@ extends CharacterBody2D
 enum movementTypes{VERTICAL, HORIZONTAL, RANDOM, CHASE}
 @export var movementType: movementTypes
 
-@onready var navigationAgent: NavigationAgent2D = $NavigationAgent2D
-@export var targetToChase: CharacterBody2D
 var rng = RandomNumberGenerator.new()
+var randDelay = 0
+var vertRan = 1
+var horiRan = 1
 
 const max_speed = 100
 const accel = 100000
-const friction = 600
 
 var posSwitch = 1
 
@@ -18,6 +18,14 @@ func _ready():
 
 func _physics_process(delta):
 	box_movement(movementType, delta)
+	
+
+func _process(_delta):
+	randDelay -= 1
+	if randDelay <= 0:
+		vertRan = rng.randi_range(-1,1)
+		horiRan = rng.randi_range(-1,1)
+		randDelay = 100
 
 func box_movement(option, delta):
 	match option:
@@ -26,14 +34,12 @@ func box_movement(option, delta):
 		1: # Horizontal
 			position += transform.x * max_speed * delta * posSwitch
 		2: # Random 
-			pass
+			position += transform.y * max_speed * delta * vertRan * posSwitch
+			position += transform.x * max_speed * delta * horiRan * posSwitch
 		3: # Chase future implementation needed
-			navigationAgent.target_position = targetToChase.global_position
-			velocity = global_position.direction_to(navigationAgent.get_next_path_position()) * max_speed * delta
+			pass
 		_:
 			pass
-	#velocity = (input * accel * delta)
-	#velocity = velocity.limit_length(max_speed)
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Terrain"):

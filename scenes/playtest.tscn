@@ -50,14 +50,15 @@ shape = SubResource("RectangleShape2D_a5r5a")
 position = Vector2(576, -13)
 shape = SubResource("RectangleShape2D_a5r5a")
 
-[node name="BoxEnemy" parent="." instance=ExtResource("2_4woor")]
+[node name="Enemy Holder" type="Node" parent="."]
+
+[node name="BoxEnemy" parent="Enemy Holder" instance=ExtResource("2_4woor")]
 position = Vector2(664, 341)
 
-[node name="BoxEnemy2" parent="." instance=ExtResource("2_4woor")]
+[node name="BoxEnemy2" parent="Enemy Holder" instance=ExtResource("2_4woor")]
 position = Vector2(391, 541)
 movementType = 1
 
-[node name="BoxEnemy3" parent="." node_paths=PackedStringArray("targetToChase") instance=ExtResource("2_4woor")]
+[node name="BoxEnemy3" parent="Enemy Holder" instance=ExtResource("2_4woor")]
 position = Vector2(916, 111)
-movementType = 3
-targetToChase = NodePath("../Player/Player")
+movementType = 2
