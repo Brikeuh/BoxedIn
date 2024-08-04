@@ -6,16 +6,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fp3b"]
 size = Vector2(46, 107)
 
-[node name="Player" type="Node2D"]
-
-[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_wra55")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_gxgqj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4fp3b")
 
-[node name="Muzzle" type="Marker2D" parent="Player"]
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(1, -41)

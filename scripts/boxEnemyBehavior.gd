@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var player = get_parent().get_parent().get_node("Player Holder").get_node("Player")
+var target_position
+
 enum movementTypes{VERTICAL, HORIZONTAL, RANDOM, CHASE}
 @export var movementType: movementTypes
 
@@ -8,7 +11,7 @@ var randDelay = 0
 var vertRan = 1
 var horiRan = 1
 
-const max_speed = 100
+const max_speed = 150
 const accel = 100000
 
 var posSwitch = 1
@@ -18,7 +21,6 @@ func _ready():
 
 func _physics_process(delta):
 	box_movement(movementType, delta)
-	
 
 func _process(_delta):
 	randDelay -= 1
@@ -36,8 +38,12 @@ func box_movement(option, delta):
 		2: # Random 
 			position += transform.y * max_speed * delta * vertRan * posSwitch
 			position += transform.x * max_speed * delta * horiRan * posSwitch
-		3: # Chase future implementation needed
-			pass
+		3: # Chase
+			target_position = (player.position - position).normalized()
+			if position.distance_to(player.position) > 3:
+				velocity = target_position * accel * delta
+				velocity = velocity.limit_length(max_speed)
+				move_and_slide()
 		_:
 			pass
 
