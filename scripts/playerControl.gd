@@ -17,9 +17,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("Attack") && shootCooldown <= 0:
-		shoot(delta)
+		shoot()
 	shootCooldown -=1
 
 ## Receive Movement related Inputs
@@ -40,7 +40,7 @@ func player_movement(delta):
 		velocity = velocity.limit_length(max_speed)
 
 ## Basic projectile attack function
-func shoot(delta):
+func shoot():
 	var p = Projectile.instantiate()
 	owner.add_child(p)
 	p.transform = $Muzzle.global_transform
