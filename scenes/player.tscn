@@ -1,20 +1,82 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6ikihaq3ps8n"]
+[gd_scene load_steps=12 format=3 uid="uid://b6ikihaq3ps8n"]
 
 [ext_resource type="Script" path="res://scripts/playerControl.gd" id="1_wra55"]
-[ext_resource type="Texture2D" uid="uid://bqj80wl3kr7vv" path="res://assets/sprites/PlayerTemporary.png" id="2_gxgqj"]
+[ext_resource type="Texture2D" uid="uid://bhohanh5y8dft" path="res://assets/sprites/StapleSniper.png" id="2_mtxd7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aufte"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e151d"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrxov"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkfqs"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aune5"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbsio"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqwsw"]
+atlas = ExtResource("2_mtxd7")
+region = Rect2(192, 0, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sk8k5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aufte")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e151d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrxov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkfqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aune5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbsio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqwsw")
+}],
+"loop": true,
+"name": &"staple_gunner_idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fp3b"]
-size = Vector2(46, 107)
+size = Vector2(32, 56)
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_wra55")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="StapleGunner2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_gxgqj")
+position = Vector2(-0.09, -4.61)
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_sk8k5")
+animation = &"staple_gunner_idle"
+frame_progress = 0.02129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_4fp3b")
 
 [node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(1, -41)
+position = Vector2(24, 0)

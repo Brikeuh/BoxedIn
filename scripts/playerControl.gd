@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 #@export var Projectile : PackedScene
 @onready var Projectile = preload("res://scenes/projectile.tscn")
+@onready var staple_gunner_2d = $StapleGunner2D
 
 const max_speed = 300
 const accel = 100000
@@ -47,5 +48,6 @@ func shoot():
 	shootCooldown = 50
 
 ## Called when the node enters the scene tree for the first time.
-#func _ready():
-	#pass # Replace with function body.
+func _ready():
+	staple_gunner_2d.play("staple_gunner_idle")
+
