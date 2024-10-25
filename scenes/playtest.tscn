@@ -16,6 +16,9 @@ size = Vector2(1165, 20)
 [node name="Player" parent="Player Holder" instance=ExtResource("1_dbl2g")]
 position = Vector2(161, 244)
 
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player Holder/Player"]
+remote_path = NodePath("../../../Camera2D")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Terrain"]]
 
 [node name="TopBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
@@ -46,3 +49,12 @@ movementType = 1
 [node name="BoxEnemy3" parent="Enemy Holder" instance=ExtResource("2_4woor")]
 position = Vector2(916, 111)
 movementType = 3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(161, 244)
+zoom = Vector2(2.5, 2.5)
+limit_left = 0
+limit_top = 0
+limit_right = 1153
+limit_bottom = 649
+editor_draw_limits = true
