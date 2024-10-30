@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b6ikihaq3ps8n"]
 
 [ext_resource type="Script" path="res://scripts/playerControl.gd" id="1_wra55"]
-[ext_resource type="Texture2D" uid="uid://bhohanh5y8dft" path="res://assets/sprites/StapleSniper.png" id="2_mtxd7"]
+[ext_resource type="Texture2D" uid="uid://bhohanh5y8dft" path="res://assets/sprites/StapleSniper_Idle_Right.png" id="2_mtxd7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aufte"]
 atlas = ExtResource("2_mtxd7")
@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"staple_gunner_idle",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fp3b"]

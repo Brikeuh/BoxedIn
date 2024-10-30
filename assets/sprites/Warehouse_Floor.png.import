@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhohanh5y8dft"
-path="res://.godot/imported/StapleSniper.png-373f67b0edfe937016fef8b5c13e483e.ctex"
+uid="uid://dj8k5j46m2ev3"
+path="res://.godot/imported/Warehouse_Floor.png-30c3af70194d9db9e366d2853dd1f6c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/StapleSniper.png"
-dest_files=["res://.godot/imported/StapleSniper.png-373f67b0edfe937016fef8b5c13e483e.ctex"]
+source_file="res://assets/sprites/Warehouse_Floor.png"
+dest_files=["res://.godot/imported/Warehouse_Floor.png-30c3af70194d9db9e366d2853dd1f6c3.ctex"]
 
 [params]
 
