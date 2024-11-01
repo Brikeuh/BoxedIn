@@ -60,8 +60,9 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fp3b"]
-size = Vector2(32, 56)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eal2f"]
+radius = 8.0
+height = 32.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_wra55")
@@ -69,14 +70,12 @@ script = ExtResource("1_wra55")
 [node name="StapleGunner2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-0.09, -4.61)
-scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_sk8k5")
 animation = &"staple_gunner_idle"
 frame_progress = 0.02129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_4fp3b")
+shape = SubResource("CapsuleShape2D_eal2f")
 
 [node name="Muzzle" type="Marker2D" parent="."]
 position = Vector2(24, 0)
