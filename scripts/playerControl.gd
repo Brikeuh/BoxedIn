@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var staple_gunner_2d = $StapleGunner2D
 
 const max_speed = 300
-const accel = 100000
+const accel = 5000
 const friction = 600
 
 var input = Vector2.ZERO
@@ -22,6 +22,14 @@ func _process(_delta):
 	if Input.is_action_pressed("Attack") && shootCooldown <= 0:
 		shoot()
 	shootCooldown -=1
+	if Input.is_action_pressed("right"):
+		staple_gunner_2d.flip_h = false
+		staple_gunner_2d.play("Running")
+	elif Input.is_action_pressed("left"):
+		staple_gunner_2d.flip_h = true
+		staple_gunner_2d.play("Running")
+	else:
+		staple_gunner_2d.play("Idle")
 
 ## Receive Movement related Inputs
 func get_input():
