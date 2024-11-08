@@ -27,6 +27,7 @@ texture = ExtResource("1_l0mk7")
 stretch_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Terrain"]]
+visible = false
 
 [node name="TopBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
 position = Vector2(-11, 336)
@@ -45,7 +46,7 @@ position = Vector2(1735.63, 658)
 shape = SubResource("RectangleShape2D_a5r5a")
 
 [node name="LeftBorder" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]
-position = Vector2(576, 576)
+position = Vector2(576, 586)
 shape = SubResource("RectangleShape2D_a5r5a")
 
 [node name="LeftBorder2" type="CollisionShape2D" parent="StaticBody2D" groups=["Terrain"]]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du6lgq4pa636u"
-path="res://.godot/imported/Staple_Sniper_V3_Idle.png-328f25d7cbdac3586c24d214eae33419.ctex"
+uid="uid://d1mwb8l3jtu6a"
+path="res://.godot/imported/Staple_Sniper_V3.png-c33390c15827ae8fdacde624ef84e183.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Staple_Sniper_V3_Idle.png"
-dest_files=["res://.godot/imported/Staple_Sniper_V3_Idle.png-328f25d7cbdac3586c24d214eae33419.ctex"]
+source_file="res://assets/sprites/Staple_Sniper_V3.png"
+dest_files=["res://.godot/imported/Staple_Sniper_V3.png-c33390c15827ae8fdacde624ef84e183.ctex"]
 
 [params]
 
