@@ -2,10 +2,11 @@ extends CharacterBody2D
 
 #@export var Projectile : PackedScene
 @onready var Projectile = preload("res://scenes/projectile.tscn")
-@onready var staple_gunner_2d = $StapleGunner2D
+@onready var animation_player = $AnimationPlayer
+@onready var sprite_2d = $Sprite2D
 
 const max_speed = 300
-const accel = 100000
+const accel = 5000
 const friction = 600
 
 var input = Vector2.ZERO
@@ -19,9 +20,24 @@ func _physics_process(delta):
 
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if Input.is_action_pressed("Attack") && shootCooldown <= 0:
+	if Input.is_action_pressed("attack") && shootCooldown <= 0:
 		shoot()
 	shootCooldown -=1
+	# Checks user input and plays the appropriate animation
+	if Input.is_action_pressed("right"):
+		sprite_2d.flip_h = false 
+		animation_player.play("walk")
+	elif Input.is_action_pressed("left"):
+		sprite_2d.flip_h = true # Flips the Player sprite
+		animation_player.play("walk")
+	elif Input.is_action_pressed("up"):
+		animation_player.play("walk")
+	elif Input.is_action_pressed("down"):
+		animation_player.play("walk")
+	else:
+		animation_player.play("idle")
+
+	
 
 ## Receive Movement related Inputs
 func get_input():
@@ -35,10 +51,21 @@ func player_movement(delta):
 	if input == Vector2.ZERO:
 		#instant stop
 		velocity = Vector2.ZERO
-	else:
-		# player will move at a set maximum speed in any direction
-		velocity = (input * accel * delta)
+		animation_player.speed_scale = 1
+	elif input.y != 0:
+		velocity = (input * accel*0.5 * delta)
 		velocity = velocity.limit_length(max_speed)
+		animation_player.speed_scale = 1.5
+	else:
+		if Input.is_action_pressed("sprint"):
+			velocity = (input * accel*2 * delta)
+			velocity = velocity.limit_length(max_speed)
+			animation_player.speed_scale = 2
+		else:
+			# player will move at a set maximum speed in any direction
+			velocity = (input * accel * delta)
+			velocity = velocity.limit_length(max_speed)
+			animation_player.speed_scale = 1
 
 ## Basic projectile attack function
 func shoot():
@@ -49,5 +76,5 @@ func shoot():
 
 ## Called when the node enters the scene tree for the first time.
 func _ready():
-	staple_gunner_2d.play("staple_gunner_idle")
+	animation_player.play("idle")
 
