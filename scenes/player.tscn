@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6ikihaq3ps8n"]
+[gd_scene load_steps=9 format=3 uid="uid://b6ikihaq3ps8n"]
 
 [ext_resource type="Script" path="res://scripts/playerControl.gd" id="1_wra55"]
+[ext_resource type="Texture2D" uid="uid://dpbj8ppo1xm6n" path="res://assets/sprites/Player_Shadow.png" id="2_dnl0s"]
 [ext_resource type="Texture2D" uid="uid://d1mwb8l3jtu6a" path="res://assets/sprites/Staple_Sniper_V3.png" id="2_dssu4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eal2f"]
@@ -64,6 +65,12 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_wra55")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.631373)
+texture_filter = 1
+position = Vector2(-4, -1)
+texture = ExtResource("2_dnl0s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_dssu4")
