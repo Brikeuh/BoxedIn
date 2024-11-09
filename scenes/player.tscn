@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6ikihaq3ps8n"]
+[gd_scene load_steps=10 format=3 uid="uid://b6ikihaq3ps8n"]
 
 [ext_resource type="Script" path="res://scripts/playerControl.gd" id="1_wra55"]
 [ext_resource type="Texture2D" uid="uid://dpbj8ppo1xm6n" path="res://assets/sprites/Player_Shadow.png" id="2_dnl0s"]
@@ -56,10 +56,27 @@ tracks/0/keys = {
 "values": [7, 8, 9, 10, 11, 12, 13, 14]
 }
 
+[sub_resource type="Animation" id="Animation_nw5jd"]
+resource_name = "shoot"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [15, 16, 17, 18, 19, 20, 21]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cuh76"]
 _data = {
 "RESET": SubResource("Animation_p3v2x"),
 "idle": SubResource("Animation_iqxrf"),
+"shoot": SubResource("Animation_nw5jd"),
 "walk": SubResource("Animation_cnipu")
 }
 
@@ -69,12 +86,13 @@ script = ExtResource("1_wra55")
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.631373)
 texture_filter = 1
-position = Vector2(-4, -1)
+position = Vector2(-2, 5)
 texture = ExtResource("2_dnl0s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.999, 0.999)
 texture = ExtResource("2_dssu4")
-hframes = 15
+hframes = 22
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -88,4 +106,4 @@ libraries = {
 }
 
 [node name="Muzzle" type="Marker2D" parent="."]
-position = Vector2(24, 0)
+position = Vector2(8, 0)
