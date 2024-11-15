@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ig3x4ae4yvvd"]
 
-[ext_resource type="PackedScene" uid="uid://b6ikihaq3ps8n" path="res://scenes/player.tscn" id="1_dbl2g"]
-[ext_resource type="Texture2D" uid="uid://dj8k5j46m2ev3" path="res://assets/sprites/Warehouse_Floor.png" id="1_l0mk7"]
+[ext_resource type="Texture2D" uid="uid://dj8k5j46m2ev3" path="res://assets/sprites/Warehouse_Floor.png" id="1_0dd5i"]
+[ext_resource type="PackedScene" uid="uid://b6ikihaq3ps8n" path="res://scenes/player/player.tscn" id="2_xn22y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4tn7"]
 size = Vector2(22, 664)
@@ -15,7 +15,7 @@ size = Vector2(1167.25, 20)
 offset_top = 248.0
 offset_right = 1152.0
 offset_bottom = 728.0
-texture = ExtResource("1_l0mk7")
+texture = ExtResource("1_0dd5i")
 stretch_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect"]
@@ -23,7 +23,7 @@ layout_mode = 0
 offset_left = 720.0
 offset_right = 1872.0
 offset_bottom = 480.0
-texture = ExtResource("1_l0mk7")
+texture = ExtResource("1_0dd5i")
 stretch_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." groups=["Terrain"]]
@@ -56,7 +56,7 @@ shape = SubResource("RectangleShape2D_a5r5a")
 
 [node name="Player Holder" type="Node2D" parent="."]
 
-[node name="Player" parent="Player Holder" instance=ExtResource("1_dbl2g")]
+[node name="Player" parent="Player Holder" instance=ExtResource("2_xn22y")]
 position = Vector2(48, 632)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player Holder/Player"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 #@export var Projectile : PackedScene
-@onready var Projectile = preload("res://scenes/projectile.tscn")
+@onready var Projectile = preload("res://scenes/player/projectile.tscn")
 @onready var animation_player = $AnimationPlayer
 @onready var sprite_2d = $Sprite2D
 @onready var shadow = $Shadow
@@ -22,28 +22,8 @@ func _physics_process(delta):
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Input.is_action_pressed("attack") && shootCooldown <= 0:
-		animation_player.play("shoot")
 		shoot()
 	shootCooldown -=1
-	# Checks user input and plays the appropriate animation
-	if Input.is_action_pressed("right"):
-		sprite_2d.flip_h = false
-		shadow.offset.x = 0 
-		animation_player.play("walk")
-	elif Input.is_action_pressed("left"):
-		sprite_2d.flip_h = true # Flips the Player sprite
-		shadow.offset.x = 4
-		animation_player.play("walk")
-	elif Input.is_action_pressed("up"):
-		animation_player.play("walk")
-	elif Input.is_action_pressed("down"):
-		animation_player.play("walk")
-	elif Input.is_action_pressed("attack"):
-		animation_player.play("shoot")
-	elif animation_player.is_playing() == false:
-		animation_player.play("idle")
-
-	
 
 ## Receive Movement related Inputs
 func get_input():
@@ -84,4 +64,3 @@ func shoot():
 ## Called when the node enters the scene tree for the first time.
 func _ready():
 	animation_player.play("idle")
-
