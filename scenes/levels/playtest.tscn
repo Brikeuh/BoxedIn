@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ig3x4ae4yvvd"]
 
-[ext_resource type="Texture2D" uid="uid://dj8k5j46m2ev3" path="res://assets/sprites/Warehouse_Floor.png" id="1_0dd5i"]
+[ext_resource type="Texture2D" uid="uid://dj8k5j46m2ev3" path="res://assets/sprites/background/Warehouse_Floor.png" id="1_0dd5i"]
 [ext_resource type="PackedScene" uid="uid://b6ikihaq3ps8n" path="res://scenes/player/player.tscn" id="2_xn22y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4tn7"]

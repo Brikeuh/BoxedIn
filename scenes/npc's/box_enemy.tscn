@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs37qypqfq60c"]
 
 [ext_resource type="Script" path="res://scripts/boxEnemyBehavior.gd" id="1_kycae"]
-[ext_resource type="Texture2D" uid="uid://xvray7majlj1" path="res://assets/sprites/BoxEnemy.png" id="2_n0lgw"]
+[ext_resource type="Texture2D" uid="uid://xvray7majlj1" path="res://assets/sprites/enemies/BoxEnemy.png" id="2_n0lgw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1oct8"]
 size = Vector2(124, 106)
