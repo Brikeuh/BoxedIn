@@ -13,6 +13,7 @@ var shadow_flip = 4 # the offset value that the shadow has to match the player w
 func Enter():
 	player = get_tree().get_first_node_in_group("Player")
 	animator.play("walk")
+	animator.speed_scale = 2
 	
 func Update(delta : float):
 	var input_dir = Input.get_vector("left", "right", "up", "down").normalized()
@@ -23,7 +24,7 @@ func Update(delta : float):
 	
 func Move(input_dir : Vector2):
 	if input_dir.y != 0:
-		player.velocity = input_dir * movespeed * 0.3
+		player.velocity = input_dir * movespeed * 0.7
 	else:
 		player.velocity = input_dir * movespeed
 		
@@ -44,4 +45,5 @@ func Move(input_dir : Vector2):
 		Transition("idle")
 		
 func Transition(newstate : String):
+	animator.speed_scale = 1
 	state_transition.emit(self, newstate)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhohanh5y8dft"
-path="res://.godot/imported/StapleSniper_Idle_Right.png-6f68579e67e178a8ed6f564fb30ccdb3.ctex"
+uid="uid://xvray7majlj1"
+path="res://.godot/imported/BoxEnemy.png-4316cfe34e3f234a0f06efa064037620.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/StapleSniper_Idle_Right.png"
-dest_files=["res://.godot/imported/StapleSniper_Idle_Right.png-6f68579e67e178a8ed6f564fb30ccdb3.ctex"]
+source_file="res://assets/sprites/enemies/BoxEnemy.png"
+dest_files=["res://.godot/imported/BoxEnemy.png-4316cfe34e3f234a0f06efa064037620.ctex"]
 
 [params]
 

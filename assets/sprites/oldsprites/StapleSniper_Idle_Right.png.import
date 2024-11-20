@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpbj8ppo1xm6n"
-path="res://.godot/imported/Player_Shadow.png-c8e8c1c4e02a5ac55c4008e7dcdf0552.ctex"
+uid="uid://bhohanh5y8dft"
+path="res://.godot/imported/StapleSniper_Idle_Right.png-8b3a2fccc20e9f5b487325b16d082cd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Player_Shadow.png"
-dest_files=["res://.godot/imported/Player_Shadow.png-c8e8c1c4e02a5ac55c4008e7dcdf0552.ctex"]
+source_file="res://assets/sprites/oldsprites/StapleSniper_Idle_Right.png"
+dest_files=["res://.godot/imported/StapleSniper_Idle_Right.png-8b3a2fccc20e9f5b487325b16d082cd9.ctex"]
 
 [params]
 
